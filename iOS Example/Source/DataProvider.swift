@@ -22,14 +22,20 @@ class ItemListProvider: EmptyableProvider<ItemList> {
     
     override func loadData() {
         self.data = .loading
-        Timer.scheduledTimer(withTimeInterval: 4.0, repeats: false) { _ in
-            self.tries += 1
-            if self.tries > 2 {
-                self.data = .success([Item(title: "Hello"),
-                                      Item(title: "World")])
-            } else {
-                self.data = .failure(AppError())
-            }
+        Timer.scheduledTimer(timeInterval: 4.0,
+                             target: self,
+                             selector: #selector(handleTimedEvent),
+                             userInfo: nil,
+                             repeats: false)
+    }
+    
+    func handleTimedEvent() {
+        self.tries += 1
+        if self.tries > 2 {
+            self.data = .success([Item(title: "Hello"),
+                                  Item(title: "World")])
+        } else {
+            self.data = .failure(AppError())
         }
     }
     

@@ -15,7 +15,3 @@ public protocol Emptyable {
 extension Array: Emptyable {
     public var isEmpty: Bool { return self.count == 0 }
 }
-
-extension String: Emptyable {
-    public var isEmpty: Bool { return self.characters.count == 0 }
-}

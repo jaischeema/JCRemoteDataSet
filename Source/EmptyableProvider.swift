@@ -9,20 +9,21 @@
 import Foundation
 
 open class EmptyableProvider<T>: Provider<T> where T:Emptyable {
-    open var emptyView: UIView {
-        return EmptyView()
+    open var emptyViewController: UIViewController {
+        return EmptyViewController(nibName: "EmptyViewController",
+                                   bundle: Bundle(for: EmptyViewController.self))
     }
     
-    override var view: UIView {
+    override var viewController: UIViewController {
         switch(data) {
         case .notAsked:
-            return self.initializeView()
+            return self.initializeViewController()
         case .loading:
-            return self.loadingView()
+            return self.loadingViewController()
         case .success(let value):
-            return value.isEmpty ? emptyView : self.dataView(value: value)
+            return value.isEmpty ? emptyViewController : self.dataViewController(value: value)
         case .failure(let error):
-            return self.errorView(error: error)
+            return self.errorViewController(error: error)
         }
     }
 }

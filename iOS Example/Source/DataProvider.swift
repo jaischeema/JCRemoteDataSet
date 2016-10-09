@@ -18,7 +18,6 @@ struct Item {
 
 class ItemListProvider: EmptyableProvider<ItemList> {
     var tries = 0
-    var tableViewSource: ItemListDataSource?
     
     override func loadData() {
         self.data = .loading
@@ -39,37 +38,7 @@ class ItemListProvider: EmptyableProvider<ItemList> {
         }
     }
     
-    override func dataView(value: ItemList) -> UIView {
-        let tView = UITableView()
-        tView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
-        self.tableViewSource = ItemListDataSource(items: value)
-        tView.delegate = self.tableViewSource
-        tView.dataSource = self.tableViewSource
-        return tView
-    }
-}
-
-class ItemListDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
-    let items: ItemList
-    
-    init(items: ItemList) {
-        self.items = items
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell")
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "ItemCell")
-        }
-        cell!.textLabel?.text = self.items[indexPath.row].title
-        return cell!
+    override func dataViewController(value: ItemList) -> UIViewController {
+        return ItemListViewController()
     }
 }

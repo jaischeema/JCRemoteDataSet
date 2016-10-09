@@ -9,9 +9,19 @@
 import UIKit
 import JCRemoteDataSet
 
-class ItemListViewController: DataViewController<ItemList> {
-    override func initializeProvider() {
-        self.title = "Item List"
-        self.provider = ItemListProvider()
+class ItemListViewController: UITableViewController {
+    var items: ItemList = []
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell")
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "ItemCell")
+        }
+        cell?.textLabel?.text = items[indexPath.row].title
+        return cell!
     }
 }

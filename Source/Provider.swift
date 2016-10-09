@@ -10,6 +10,7 @@ import Foundation
 
 public protocol ProviderDelegate {
     func providerDataDidChange()
+    func providerDataDidUpdate()
 }
 
 open class Provider<T>: NSObject {
@@ -17,7 +18,11 @@ open class Provider<T>: NSObject {
     
     public var data: RemoteData<T> = .notAsked {
         didSet {
-            self.delegate?.providerDataDidChange()
+            if oldValue.isSuccess && data.isSuccess {
+                self.delegate?.providerDataDidUpdate()
+            } else {
+                self.delegate?.providerDataDidChange()
+            }
         }
     }
     
@@ -25,39 +30,43 @@ open class Provider<T>: NSObject {
         super.init()
     }
     
-    var view: UIView {
+    var viewController: UIViewController {
         switch(data) {
         case .notAsked:
-            return self.initializeView()
+            return self.initializeViewController()
         case .loading:
-            return self.loadingView()
+            return self.loadingViewController()
         case .success(let value):
-            return self.dataView(value: value)
+            return self.dataViewController(value: value)
         case .failure(let error):
-            return self.errorView(error: error)
+            return self.errorViewController(error: error)
         }
     }
     
-    open func errorView(error: Error) -> UIView {
-        let view = ErrorView()
-        view.errorLabel.text = error.localizedDescription
-        view.reloadHandler = { [unowned self] _ in
+    open var title: String { return "" }
+    
+    open func errorViewController(error: Error) -> UIViewController {
+        let viewController = ErrorViewController(nibName: "ErrorViewController",
+                                                 bundle: Bundle(for: ErrorViewController.self))
+        viewController.errorMessage = error.localizedDescription
+        viewController.reloadHandler = { [unowned self] _ in
             self.loadData()
         }
-        return view
+        return viewController
     }
     
-    open func dataView(value: T) -> UIView {
-        return UIView()
+    open func dataViewController(value: T) -> UIViewController {
+        return UIViewController()
     }
     
-    open func initializeView() -> UIView {
-        return UIView()
+    open func initializeViewController() -> UIViewController {
+        return UIViewController()
     }
     
-    open func loadingView() -> UIView {
-        return LoadingView()
+    open func loadingViewController() -> UIViewController {
+        return LoadingViewController(nibName: "LoadingViewController",
+                                     bundle: Bundle(for: LoadingViewController.self))
     }
     
-    open func loadData() {}
+    open func loadData(skipCache: Bool = false) {}
 }

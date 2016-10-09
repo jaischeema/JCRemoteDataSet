@@ -13,4 +13,22 @@ public enum RemoteData<T> {
     case loading
     case failure(Error)
     case success(T)
+    
+    public var value: T? {
+        switch self {
+        case .success(let value):
+            return value
+        default:
+            return nil
+        }
+    }
+    
+    public var isSuccess: Bool {
+        switch self {
+        case .success(let value):
+            return true
+        default:
+            return false
+        }
+    }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JCRemoteDataSet
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let viewController = ItemListViewController()
+        let viewController = RemoteDataViewController<ItemList>()
+        viewController.provider = ItemListProvider()
         self.window?.rootViewController = UINavigationController(rootViewController: viewController)
         return true
     }

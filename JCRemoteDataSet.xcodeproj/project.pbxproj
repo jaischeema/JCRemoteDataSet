@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200501441DA9F2F60021AF7F /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200501421DA9F2F60021AF7F /* ErrorViewController.swift */; };
+		200501451DA9F2F60021AF7F /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 200501431DA9F2F60021AF7F /* ErrorViewController.xib */; };
+		200501481DAA02350021AF7F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200501461DAA02350021AF7F /* LoadingViewController.swift */; };
+		200501491DAA02350021AF7F /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 200501471DAA02350021AF7F /* LoadingViewController.xib */; };
+		2005014D1DAA04580021AF7F /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005014B1DAA04580021AF7F /* EmptyViewController.swift */; };
+		2005014E1DAA04580021AF7F /* EmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2005014C1DAA04580021AF7F /* EmptyViewController.xib */; };
+		200501511DAA04D50021AF7F /* RemoteDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005014F1DAA04D50021AF7F /* RemoteDataViewController.swift */; };
+		200501521DAA04D50021AF7F /* RemoteDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 200501501DAA04D50021AF7F /* RemoteDataViewController.xib */; };
 		20AEB1ED1DA86002002153D9 /* RemoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEB1EC1DA86002002153D9 /* RemoteData.swift */; };
 		20AEB1EF1DA86036002153D9 /* Emptyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEB1EE1DA86036002153D9 /* Emptyable.swift */; };
 		20AEB1F11DA86083002153D9 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEB1F01DA86083002153D9 /* Provider.swift */; };
-		20AEB1FA1DA8613D002153D9 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEB1F31DA8613D002153D9 /* EmptyView.swift */; };
-		20AEB1FB1DA8613D002153D9 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20AEB1F41DA8613D002153D9 /* EmptyView.xib */; };
-		20AEB1FC1DA8613D002153D9 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEB1F51DA8613D002153D9 /* ErrorView.swift */; };
-		20AEB1FD1DA8613D002153D9 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20AEB1F61DA8613D002153D9 /* ErrorView.xib */; };
-		20AEB1FE1DA8613D002153D9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEB1F71DA8613D002153D9 /* LoadingView.swift */; };
-		20AEB1FF1DA8613D002153D9 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20AEB1F81DA8613D002153D9 /* LoadingView.xib */; };
-		20AEB2001DA8613D002153D9 /* NIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEB1F91DA8613D002153D9 /* NIBView.swift */; };
 		20AEB2021DA8619E002153D9 /* EmptyableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEB2011DA8619E002153D9 /* EmptyableProvider.swift */; };
-		20AEB2041DA861FC002153D9 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEB2031DA861FC002153D9 /* DataViewController.swift */; };
 		D95E1BE71D88D63400F94976 /* JCRemoteDataSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* JCRemoteDataSet.framework */; };
 		D95E1BEC1D88D63400F94976 /* JCRemoteDataSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* JCRemoteDataSetTests.swift */; };
 		D95E1BEE1D88D63400F94976 /* JCRemoteDataSet.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* JCRemoteDataSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,18 +35,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		200501421DA9F2F60021AF7F /* ErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorViewController.swift; path = "View Controllers/ErrorViewController.swift"; sourceTree = "<group>"; };
+		200501431DA9F2F60021AF7F /* ErrorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ErrorViewController.xib; path = "View Controllers/ErrorViewController.xib"; sourceTree = "<group>"; };
+		200501461DAA02350021AF7F /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingViewController.swift; path = "View Controllers/LoadingViewController.swift"; sourceTree = "<group>"; };
+		200501471DAA02350021AF7F /* LoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadingViewController.xib; path = "View Controllers/LoadingViewController.xib"; sourceTree = "<group>"; };
+		2005014B1DAA04580021AF7F /* EmptyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyViewController.swift; path = "View Controllers/EmptyViewController.swift"; sourceTree = "<group>"; };
+		2005014C1DAA04580021AF7F /* EmptyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmptyViewController.xib; path = "View Controllers/EmptyViewController.xib"; sourceTree = "<group>"; };
+		2005014F1DAA04D50021AF7F /* RemoteDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteDataViewController.swift; sourceTree = "<group>"; };
+		200501501DAA04D50021AF7F /* RemoteDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemoteDataViewController.xib; sourceTree = "<group>"; };
 		20AEB1EC1DA86002002153D9 /* RemoteData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteData.swift; sourceTree = "<group>"; };
 		20AEB1EE1DA86036002153D9 /* Emptyable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emptyable.swift; sourceTree = "<group>"; };
 		20AEB1F01DA86083002153D9 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
-		20AEB1F31DA8613D002153D9 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyView.swift; path = Views/EmptyView.swift; sourceTree = "<group>"; };
-		20AEB1F41DA8613D002153D9 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmptyView.xib; path = Views/EmptyView.xib; sourceTree = "<group>"; };
-		20AEB1F51DA8613D002153D9 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorView.swift; path = Views/ErrorView.swift; sourceTree = "<group>"; };
-		20AEB1F61DA8613D002153D9 /* ErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ErrorView.xib; path = Views/ErrorView.xib; sourceTree = "<group>"; };
-		20AEB1F71DA8613D002153D9 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Views/LoadingView.swift; sourceTree = "<group>"; };
-		20AEB1F81DA8613D002153D9 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadingView.xib; path = Views/LoadingView.xib; sourceTree = "<group>"; };
-		20AEB1F91DA8613D002153D9 /* NIBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NIBView.swift; path = Views/NIBView.swift; sourceTree = "<group>"; };
 		20AEB2011DA8619E002153D9 /* EmptyableProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyableProvider.swift; sourceTree = "<group>"; };
-		20AEB2031DA861FC002153D9 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		D95E1BDD1D88D63300F94976 /* JCRemoteDataSet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JCRemoteDataSet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E1BE01D88D63300F94976 /* JCRemoteDataSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCRemoteDataSet.h; sourceTree = "<group>"; };
 		D95E1BE11D88D63300F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,18 +74,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20AEB1F21DA860CC002153D9 /* Views */ = {
+		2005014A1DAA043A0021AF7F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				20AEB1F31DA8613D002153D9 /* EmptyView.swift */,
-				20AEB1F41DA8613D002153D9 /* EmptyView.xib */,
-				20AEB1F51DA8613D002153D9 /* ErrorView.swift */,
-				20AEB1F61DA8613D002153D9 /* ErrorView.xib */,
-				20AEB1F71DA8613D002153D9 /* LoadingView.swift */,
-				20AEB1F81DA8613D002153D9 /* LoadingView.xib */,
-				20AEB1F91DA8613D002153D9 /* NIBView.swift */,
+				200501421DA9F2F60021AF7F /* ErrorViewController.swift */,
+				200501431DA9F2F60021AF7F /* ErrorViewController.xib */,
+				200501461DAA02350021AF7F /* LoadingViewController.swift */,
+				200501471DAA02350021AF7F /* LoadingViewController.xib */,
+				2005014B1DAA04580021AF7F /* EmptyViewController.swift */,
+				2005014C1DAA04580021AF7F /* EmptyViewController.xib */,
 			);
-			name = Views;
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		D95E1BD31D88D63200F94976 = {
@@ -110,14 +109,15 @@
 		D95E1BDF1D88D63300F94976 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				20AEB1F21DA860CC002153D9 /* Views */,
 				D95E1BE01D88D63300F94976 /* JCRemoteDataSet.h */,
 				D95E1BE11D88D63300F94976 /* Info.plist */,
 				20AEB1EC1DA86002002153D9 /* RemoteData.swift */,
 				20AEB1EE1DA86036002153D9 /* Emptyable.swift */,
 				20AEB1F01DA86083002153D9 /* Provider.swift */,
 				20AEB2011DA8619E002153D9 /* EmptyableProvider.swift */,
-				20AEB2031DA861FC002153D9 /* DataViewController.swift */,
+				2005014A1DAA043A0021AF7F /* View Controllers */,
+				2005014F1DAA04D50021AF7F /* RemoteDataViewController.swift */,
+				200501501DAA04D50021AF7F /* RemoteDataViewController.xib */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -233,9 +233,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20AEB1FD1DA8613D002153D9 /* ErrorView.xib in Resources */,
-				20AEB1FF1DA8613D002153D9 /* LoadingView.xib in Resources */,
-				20AEB1FB1DA8613D002153D9 /* EmptyView.xib in Resources */,
+				2005014E1DAA04580021AF7F /* EmptyViewController.xib in Resources */,
+				200501451DA9F2F60021AF7F /* ErrorViewController.xib in Resources */,
+				200501521DAA04D50021AF7F /* RemoteDataViewController.xib in Resources */,
+				200501491DAA02350021AF7F /* LoadingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +255,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				20AEB1F11DA86083002153D9 /* Provider.swift in Sources */,
-				20AEB1FC1DA8613D002153D9 /* ErrorView.swift in Sources */,
-				20AEB2041DA861FC002153D9 /* DataViewController.swift in Sources */,
-				20AEB1FA1DA8613D002153D9 /* EmptyView.swift in Sources */,
 				20AEB2021DA8619E002153D9 /* EmptyableProvider.swift in Sources */,
-				20AEB2001DA8613D002153D9 /* NIBView.swift in Sources */,
+				2005014D1DAA04580021AF7F /* EmptyViewController.swift in Sources */,
 				20AEB1ED1DA86002002153D9 /* RemoteData.swift in Sources */,
-				20AEB1FE1DA8613D002153D9 /* LoadingView.swift in Sources */,
+				200501441DA9F2F60021AF7F /* ErrorViewController.swift in Sources */,
+				200501511DAA04D50021AF7F /* RemoteDataViewController.swift in Sources */,
+				200501481DAA02350021AF7F /* LoadingViewController.swift in Sources */,
 				20AEB1EF1DA86036002153D9 /* Emptyable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
